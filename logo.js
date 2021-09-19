@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Platform} from 'react-native';
 
 export const Logo = () => {
   return (
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   logos: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: 55,
-    marginBottom: 70,
+    marginTop: Platform.OS === 'android' ? 10 : 55,
+    marginBottom: Platform.OS === 'android' ? 30 : 70,
   },
   logoText: {
     color: '#fff',
