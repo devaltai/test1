@@ -16,28 +16,28 @@ const height = Dimensions.get("window").height
 const width = Dimensions.get("window").width
 
 
-export const GenderScreen = ({navigation}) => {
+export const RelationScreen = ({navigation}) => {
   
   return (
     <View style={styles.container}>
       <Text>What’s your gender?</Text>
       <Text>This highlights the duality of your masculine and femine energies.</Text>
       <View style={styles.boxs}>
-        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Relation')}>
-          <Image source={require('../img/male.png')} style={styles.img}/>
-          <Text>Male</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Relation')}>
-          <Image source={require('../img/female.png')} style={styles.img}/>
-          <Text >Female</Text>
-        </TouchableOpacity>
+        <View style={styles.box}>
+          <Image source={require('../img/single.png')} style={styles.img}/>
+          <Text>Single</Text>
+        </View>
+        <View style={styles.box}>
+          <Image source={require('../img/heart.png')} style={styles.img}/>
+          <Text>In a relationship</Text>
+        </View>
       </View>
     </View>
     
   )
 }
 
-GenderScreen.options = () => {
+RelationScreen.options = () => {
     return {
       header: () => <Head/>,
     }

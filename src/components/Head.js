@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   StyleSheet,
@@ -7,9 +6,6 @@ import {
   SafeAreaView
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-
-
-
 
 
 export const Head = ({navigation}) => {
@@ -29,22 +25,21 @@ export const Head = ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-head: {
-    height: 100,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row'
-},
-tinyLogo: {
-    width: 40,
-    height: 40,
-},
-text: {
-    color: '#fff',
-    fontWeight: '700',
-    fontStyle: 'normal',
-    fontSize: 30
-},
-
+    head: {
+        height: 100,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    tinyLogo: {
+        width: 40,
+        height: 40,
+    },
+    text: {
+        color: '#fff',
+        fontWeight: '700',
+        fontStyle: 'normal',
+        fontSize: 30
+    },
 });

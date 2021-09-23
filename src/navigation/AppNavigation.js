@@ -5,6 +5,7 @@ import {HomeScreen} from '../screens/HomeScreen'
 import {DateScreen} from '../screens/DateScreen'
 import {GenderScreen} from '../screens/GenderScreen'
 import {NameScreen} from '../screens/NameScreen'
+import {RelationScreen} from '../screens/RelationScreen'
 
 
 const Stack = createNativeStackNavigator();
@@ -17,6 +18,7 @@ export const AppNavigation = () => {
         <Stack.Screen name="Name" component={NameScreen} options={NameScreen.options} />
         <Stack.Screen name="Date" component={DateScreen} options={DateScreen.options} />
         <Stack.Screen name="Gender" component={GenderScreen} options={GenderScreen.options} />
+        <Stack.Screen name="Relation" component={RelationScreen} options={RelationScreen.options} />
       </Stack.Navigator>
     </NavigationContainer>
   );

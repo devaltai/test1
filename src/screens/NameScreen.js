@@ -1,27 +1,26 @@
 
+//Core
 import React from 'react';
-import {
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Button
-} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import {StyleSheet, Text, View, Dimensions} from 'react-native';
+
+//Componets
+import {Format } from '../components/Format';
+import {Continue} from '../components/Continue'
 import {Head} from '../components/Head'
 
-
-
+const height = Dimensions.get("window").height
 
 export const NameScreen = ({navigation}) => {
+  const Handler = () => {
+    navigation.navigate('Date')
+  }
   
   return (
-    <View >
+    <View style={styles.container}>
       <Text>What's your name?</Text>
-      <View>
-        <Text>Tim</Text>
-        <Button title='Continue' onPress={() => navigation.navigate("Date")} />
+      <View style={styles.container1}>
+        <Format title="Tim"/>
+        <Continue Handler={Handler} label='Countinue'/>
       </View>
     </View>
     
@@ -35,10 +34,15 @@ NameScreen.options = () => {
 }
 
 const styles = StyleSheet.create({
-  button: {
-    marginTop: 430,
-    paddingTop: 160,
-  }
+  container: {
+    padding: 20,
+    height: height - 100,
+  },
+  container1: {
+    flex: 1,
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
-
- 
