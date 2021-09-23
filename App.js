@@ -1,16 +1,12 @@
 
-import React, {useState} from 'react';
-import {
-  StyleSheet,  
-} from 'react-native';
-import {HomeScreen} from './src/screens/HomeScreen'
+import React from 'react';
+import {AppNavigation} from './src/navigation/AppNavigation'
 
 const App = () => {
   return (
-    <HomeScreen />
+    <AppNavigation />
   )
 };
-
 
 export default App;
  

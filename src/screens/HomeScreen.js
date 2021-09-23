@@ -61,6 +61,12 @@ export const HomeScreen = () => {
   );
 };
 
+HomeScreen.options = () => {
+    return {
+        headerShown: false
+    }
+}
+
 const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
