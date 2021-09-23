@@ -14,7 +14,7 @@ import {Status} from '../components/status'
 
 
 
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
   const [list, setList] = useState(1);
   const [but, setBut] = useState({label: 'Cool!', titleSize: 46, textSize: 44});
   const items = Data.filter(x => x.cat === list);
@@ -51,7 +51,7 @@ export const HomeScreen = () => {
       {item}
       <View style={styles.blockButton}>
         <Status list={list} />
-        <TouchableOpacity style={styles.opacity} onPress={buttonList}>
+        <TouchableOpacity style={styles.opacity} onPress={() => navigation.navigate("Name")}>
           <Text style={styles.opacityText}>{but.label}</Text>
         </TouchableOpacity>
       </View>
