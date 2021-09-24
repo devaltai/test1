@@ -20,7 +20,7 @@ export const GenderScreen = ({navigation}) => {
   
   return (
     <View style={styles.container}>
-      <Text>What’s your gender?</Text>
+      <Text style={styles.title}>What’s your gender?</Text>
       <Text>This highlights the duality of your masculine and femine energies.</Text>
       <View style={styles.boxs}>
         <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Relation')}>
@@ -69,5 +69,11 @@ const styles = StyleSheet.create({
   },
   img: {
     marginBottom: 33
-  }
+  },
+  title: {
+    color: '#000',
+    fontWeight: '700',
+    fontStyle: 'normal',
+    fontSize: 20,
+  },
 });

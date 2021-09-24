@@ -15,7 +15,7 @@ export const DateScreen = ({navigation}) => {
   }
   return (
     <View style={styles.container}>
-      <Text>What’s your date of birth?</Text>
+      <Text style={styles.title}>What’s your date of birth?</Text>
       <View style={styles.container1}>
         <Format title="1 January 1992"/>
         <Continue Handler={Handler} label='Countinue'/>
@@ -41,6 +41,12 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  title: {
+    color: '#000',
+    fontWeight: '700',
+    fontStyle: 'normal',
+    fontSize: 20,
   }
 });
 

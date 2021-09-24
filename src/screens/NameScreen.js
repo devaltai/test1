@@ -17,7 +17,7 @@ export const NameScreen = ({navigation}) => {
   
   return (
     <View style={styles.container}>
-      <Text>What's your name?</Text>
+      <Text style={styles.title}>What's your name?</Text>
       <View style={styles.container1}>
         <Format title="Tim"/>
         <Continue Handler={Handler} label='Countinue'/>
@@ -45,4 +45,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    color: '#000',
+    fontWeight: '700',
+    fontStyle: 'normal',
+    fontSize: 20,
+  }
 });
